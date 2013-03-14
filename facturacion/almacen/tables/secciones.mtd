@@ -1,0 +1,49 @@
+<!DOCTYPE TMD>
+<TMD>
+    <name>secciones</name>
+<!-- Listado de secciones de artículos -->    <alias>QT_TRANSLATE_NOOP("MetaData","Secciones")</alias>
+    <field>
+        <name>codseccion</name>
+		<!-- Código de la seccion -->        
+		<alias>QT_TRANSLATE_NOOP("MetaData","Código")</alias>
+        <null>false</null>
+        <pk>true</pk>
+        <type>string</type>
+        <length>2</length>
+        <relation>
+            <table>familias</table>
+            <field>codseccion</field>
+            <card>1M</card>
+        </relation>
+        <relation>
+            <table>articulos</table>
+            <field>codseccion</field>
+            <card>1M</card>
+        </relation>
+        <relation>
+            <table>tarifasclientes</table>
+            <field>codseccion</field>
+            <card>1M</card>
+        </relation>
+		<relation>
+			<table>margenestarifas</table>
+			<field>codseccion</field>
+			<card>1M</card>
+		</relation>
+    </field>
+    <field>
+        <name>descripcion</name>
+        <alias>QT_TRANSLATE_NOOP("MetaData","Descripción")</alias>
+        <null>false</null>
+        <pk>false</pk>
+        <type>string</type>
+        <length>100</length>
+    </field>
+    <field>
+        <name>imagen</name>
+        <alias>QT_TRANSLATE_NOOP("MetaData","Icono")</alias>
+        <null>true</null>
+        <pk>false</pk>
+        <type>pixmap</type>
+    </field>
+</TMD>

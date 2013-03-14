@@ -1,0 +1,62 @@
+<!DOCTYPE TMD>
+<TMD>
+	<name>codigosdebarras</name>
+	<!-- Códigos de barras de los artículos-->
+	<alias>QT_TRANSLATE_NOOP("MetaData","Códigos de barras por artículo")</alias>
+
+	<field>
+		<name>codigodebarras</name>
+		<alias>QT_TRANSLATE_NOOP("MetaData","Código de barras")</alias>
+		<null>false</null>
+		<pk>true</pk>
+		<type>string</type>
+		<length>18</length>
+	</field>
+
+	<field>
+		<name>unidades</name>
+		<!-- Valor del stock -->
+		<alias>QT_TRANSLATE_NOOP("MetaData","Unidades")</alias>
+		<null>false</null>
+		<pk>false</pk>
+		<type>double</type>
+		<partI>10</partI>
+		<partD>2</partD>
+		<default>1</default>
+	</field>
+
+    <field>
+        <name>tipocodbarras</name>
+<!-- Tipo del código de barras	-->        <alias>QT_TRANSLATE_NOOP("MetaData","Tipo Cod.Barras")</alias>
+        <null>true</null>
+        <pk>false</pk>
+        <optionslist>Code39,Code128,Code128B,Code128C,Code128R,EAN,ISBN,UPC,CodeI25,CBR,MSI,PLS,Code93</optionslist>
+	<default>EAN</default>
+        <type>string</type>
+        <length>8</length>
+    </field>
+    <field>
+        <name>imagen</name>
+        <alias>QT_TRANSLATE_NOOP("MetaData","Imagen")</alias>
+        <null>true</null>
+        <pk>false</pk>
+        <type>pixmap</type>
+    </field>
+
+	<field>
+		<name>referencia</name>
+		<!-- Código del artículo al que pertenece -->
+		<alias>QT_TRANSLATE_NOOP("MetaData","Cód. artículo")</alias>
+		<null>false</null>
+		<pk>false</pk>
+		<type>string</type>
+		<length>18</length>
+
+		<relation>
+			<table>articulos</table>
+			<field>referencia</field>
+			<card>M1</card>
+		</relation>
+	</field>
+
+</TMD>

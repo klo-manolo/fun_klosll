@@ -1,0 +1,139 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<!DOCTYPE KugarTemplate SYSTEM "kugartemplate.dtd">
+<KugarTemplate BottomMargin="10" TopMargin="10" RightMargin="10" LeftMargin="10" PageOrientation="0" PageSize="0" >
+ <Detail Height="200" Level="0" >
+  
+	<!-- EMPRESA -->
+  <Line Width="1" Y1="0" Y2="0" X1="0" X2="370" Style="1" Color="100,100,100" />
+  <Line Width="1" Y1="80" Y2="80" X1="0" X2="370" Style="1" Color="100,100,100" />
+  <Line Width="1" Y1="0" Y2="80" X1="0" X2="0" Style="1" Color="100,100,100" />
+  <Line Width="1" Y1="0" Y2="80" X1="370" X2="370" Style="1" Color="100,100,100" />
+	
+	<Label WordWrap="0" Width="300" X="1" Y="90" BorderStyle="0" Height="20" HAlignment="0" BorderColor="0,0,0" BackgroundColor="255,255,255" FontItalic="0" VAlignment="1" ForegroundColor="0,0,0" Text="Precios de artículos por tarifa" FontWeight="65" FontSize="12" BorderWidth="1" FontFamily="Arial" />
+  
+	<CalculatedField VAlignment="1" HAlignment="0"
+		   CommaSeparator="53" BorderStyle="0" WordWrap="0"
+		   CalculationType="6" FunctionName="flfactinfo.encabezadoInforme"
+		   DrawLeft="false" Field="seccion" X="1"
+		   Y="110" ForegroundColor="0,0,0" NegValueColor="0,0,0"
+		   Text="" DataType="0" BorderColor="0,0,0"
+		   DateFormat="11" FontFamily="Arial Narrow" DrawTop="false"
+		   FontWeight="50" InputMask="" Precision="2"
+		   Height="20" Width="760" 
+		   BackgroundColor="255,255,255" Currency="53" FontItalic="0"
+		   BorderWidth="1" DrawRight="false" DrawBottom="false"
+		   FontSize="10" />
+	<CalculatedField VAlignment="1" HAlignment="0"
+		   CommaSeparator="53" BorderStyle="0" WordWrap="0"
+		   CalculationType="6" FunctionName="flfactinfo.encabezadoInforme"
+		   DrawLeft="false" Field="familia" X="1"
+		   Y="130" ForegroundColor="0,0,0" NegValueColor="0,0,0"
+		   Text="" DataType="0" BorderColor="0,0,0"
+		   DateFormat="11" FontFamily="Arial Narrow" DrawTop="false"
+		   FontWeight="50" InputMask="" Precision="2"
+		   Height="20" Width="760" 
+		   BackgroundColor="255,255,255" Currency="53" FontItalic="0"
+		   BorderWidth="1" DrawRight="false" DrawBottom="false"
+		   FontSize="10" />
+	<CalculatedField VAlignment="1" HAlignment="0"
+		   CommaSeparator="53" BorderStyle="0" WordWrap="0"
+		   CalculationType="6" FunctionName="flfactinfo.encabezadoInforme"
+		   DrawLeft="false" Field="subfamilia" X="1"
+		   Y="150" ForegroundColor="0,0,0" NegValueColor="0,0,0"
+		   Text="" DataType="0" BorderColor="0,0,0"
+		   DateFormat="11" FontFamily="Arial Narrow" DrawTop="false"
+		   FontWeight="50" InputMask="" Precision="2"
+		   Height="20" Width="760" 
+		   BackgroundColor="255,255,255" Currency="53" FontItalic="0"
+		   BorderWidth="1" DrawRight="false" DrawBottom="false"
+		   FontSize="10" />
+	<CalculatedField VAlignment="1" HAlignment="0"
+		   CommaSeparator="53" BorderStyle="0" WordWrap="0"
+		   CalculationType="6" FunctionName="flfactinfo.encabezadoInforme"
+		   DrawLeft="false" Field="referencia" X="1"
+		   Y="170" ForegroundColor="0,0,0" NegValueColor="0,0,0"
+		   Text="" DataType="0" BorderColor="0,0,0"
+		   DateFormat="11" FontFamily="Arial Narrow" DrawTop="false"
+		   FontWeight="50" InputMask="" Precision="2"
+		   Height="20" Width="760" 
+		   BackgroundColor="255,255,255" Currency="53" FontItalic="0"
+		   BorderWidth="1" DrawRight="false" DrawBottom="false"
+		   FontSize="10" />
+
+	<Field WordWrap="1" Width="260" X="2" Y="2" BorderStyle="0" NegValueColor="0,0,0" Height="35" HAlignment="1" DataType="0" Field="empresa.nombre" DateFormat="11" Currency="32" BorderColor="0,0,0" BackgroundColor="220,220,220" FontItalic="0" VAlignment="1" ForegroundColor="0,0,0" CommaSeparator="44" Text="[empresa.nombre]" FontWeight="65" FontSize="10" BorderWidth="1" Precision="2" FontFamily="Arial" />
+ 
+	<CalculatedField CalculationType="6" FunctionName="flfactinfo.pub_logo" WordWrap="0" Width="109" X="260" Y="2" BorderStyle="0" NegValueColor="0,0,0" Height="34" HAlignment="0" DataType="5" Field="empresa.logo" DateFormat="11" Currency="32" BorderColor="0,0,0" BackgroundColor="255,255,255" FontItalic="0" VAlignment="1" ForegroundColor="0,0,0" CommaSeparator="44" Text="[empresa.logo]" FontWeight="50" FontSize="12" BorderWidth="1" Precision="2" FontFamily="Arial Narrow" />
+	<Label WordWrap="0" Width="60" X="5" Y="40" BorderStyle="0" Height="18" HAlignment="0" BorderColor="0,0,0" BackgroundColor="255,255,255" FontItalic="0" VAlignment="1" ForegroundColor="0,0,0" Text="CIF/NIF" FontWeight="50" FontSize="10" BorderWidth="1" FontFamily="Arial Narrow" />
+  <Field WordWrap="0" Width="80" X="45" Y="40" BorderStyle="0" NegValueColor="0,0,0" Height="18" HAlignment="0" DataType="0" Field="empresa.cifnif" DateFormat="11" Currency="32" BorderColor="0,0,0" BackgroundColor="255,255,255" FontItalic="0" VAlignment="1" ForegroundColor="0,0,0" CommaSeparator="44" Text="[empresa.cifnif]" FontWeight="50" FontSize="10" BorderWidth="1" Precision="2" FontFamily="Arial Narrow" />
+ 
+  <Field WordWrap="0" Width="235" X="125" Y="40" BorderStyle="0" NegValueColor="0,0,0" Height="18" HAlignment="0" DataType="0" Field="empresa.direccion" DateFormat="11" Currency="32" BorderColor="0,0,0" BackgroundColor="255,255,255" FontItalic="0" VAlignment="1" ForegroundColor="0,0,0" CommaSeparator="44" Text="[empresa.direccion]" FontWeight="50" FontSize="10" BorderWidth="1" Precision="2" FontFamily="Arial Narrow" />
+  <Field WordWrap="0" Width="45" X="5" Y="60" BorderStyle="0" NegValueColor="0,0,0" Height="18" HAlignment="0" DataType="0" Field="empresa.codpostal" DateFormat="11" Currency="32" BorderColor="0,0,0" BackgroundColor="255,255,255" FontItalic="0" VAlignment="1" ForegroundColor="0,0,0" CommaSeparator="44" Text="[empresa.codpostal]" FontWeight="50" FontSize="10" BorderWidth="1" Precision="2" FontFamily="Arial Narrow" />
+  <Field WordWrap="0" Width="150" X="65" Y="60" BorderStyle="0" NegValueColor="0,0,0" Height="18" HAlignment="0" DataType="0" Field="empresa.ciudad" DateFormat="11" Currency="32" BorderColor="0,0,0" BackgroundColor="255,255,255" FontItalic="0" VAlignment="1" ForegroundColor="0,0,0" CommaSeparator="44" Text="[empresa.ciudad]" FontWeight="50" FontSize="10" BorderWidth="1" Precision="2" FontFamily="Arial Narrow" />
+  <Field WordWrap="0" Width="100" X="215" Y="60" BorderStyle="0" NegValueColor="0,0,0" Height="18" HAlignment="0" DataType="0" Field="empresa.provincia" DateFormat="11" Currency="32" BorderColor="0,0,0" BackgroundColor="255,255,255" FontItalic="0" VAlignment="1" ForegroundColor="0,0,0" CommaSeparator="44" Text="[empresa.provincia]" FontWeight="50" FontSize="10" BorderWidth="1" Precision="2" FontFamily="Arial Narrow" />
+ 
+ </Detail>
+ 
+ <DetailHeader Height="20" Level="1" >
+ <Label WordWrap="0" Width="80" X="0" Y="0" BorderStyle="0" Height="20" HAlignment="1" BorderColor="0,0,0" BackgroundColor="220,220,220" FontItalic="0" VAlignment="1" ForegroundColor="0,0,0" Text="Referencia" FontWeight="65" FontSize="10" BorderWidth="1" FontFamily="Arial" />
+ <Label WordWrap="0" Width="285" X="80" Y="0" BorderStyle="0" Height="20" HAlignment="1" BorderColor="0,0,0" BackgroundColor="220,220,220" FontItalic="0" VAlignment="1" ForegroundColor="0,0,0" Text="Descripción" FontWeight="65" FontSize="10" BorderWidth="1" FontFamily="Arial" />
+ 
+ <Label WordWrap="0" Width="50" X="370" Y="0" BorderStyle="0" Height="20" HAlignment="2" BorderColor="0,0,0" BackgroundColor="220,220,220" FontItalic="0" VAlignment="1" ForegroundColor="0,0,0" Text="%I.V.A." FontWeight="65" FontSize="10" BorderWidth="1" FontFamily="Arial" />
+ <Label WordWrap="0" Width="38" X="422" Y="0" BorderStyle="0" Height="20" HAlignment="2" BorderColor="0,0,0" BackgroundColor="220,220,220" FontItalic="0" VAlignment="1" ForegroundColor="0,0,0" Text="%R.E." FontWeight="65" FontSize="10" BorderWidth="1" FontFamily="Arial" />
+<CalculatedField VAlignment="1" HAlignment="0"
+	   CommaSeparator="53" BorderStyle="0" WordWrap="0"
+	   CalculationType="6" FunctionName="flfactinfo.encabezadoInforme"
+	   DrawLeft="false" Field="tarifa1" X="462"
+	   Y="0" ForegroundColor="0,0,0" NegValueColor="0,0,0"
+	   Text="" DataType="0" BorderColor="0,0,0"
+	   DateFormat="11" FontFamily="Arial" DrawTop="false"
+	   FontWeight="65" InputMask="" Precision="2"
+	   Height="20" Width="83" 
+	   BackgroundColor="220,220,220" Currency="53" FontItalic="0"
+	   BorderWidth="1" DrawRight="false" DrawBottom="false"
+	   FontSize="10" />
+<CalculatedField VAlignment="1" HAlignment="0"
+	   CommaSeparator="53" BorderStyle="0" WordWrap="0"
+	   CalculationType="6" FunctionName="flfactinfo.encabezadoInforme"
+	   DrawLeft="false" Field="tarifa2" X="547"
+	   Y="0" ForegroundColor="0,0,0" NegValueColor="0,0,0"
+	   Text="" DataType="0" BorderColor="0,0,0"
+	   DateFormat="11" FontFamily="Arial" DrawTop="false"
+	   FontWeight="65" InputMask="" Precision="2"
+	   Height="20" Width="83" 
+	   BackgroundColor="220,220,220" Currency="53" FontItalic="0"
+	   BorderWidth="1" DrawRight="false" DrawBottom="false"
+	   FontSize="10" />
+ </DetailHeader>
+  
+ 
+ <Detail Height="20" Level="1" >
+  <Field WordWrap="0" Width="80" X="5" Y="0" BorderStyle="0" NegValueColor="0,0,0" Height="20" HAlignment="0" DataType="0" Field="i_tarifasarticulos_buffer.referencia" DateFormat="11" Currency="32" BorderColor="0,0,0" BackgroundColor="255,255,255" FontItalic="0" VAlignment="1" ForegroundColor="0,0,0" CommaSeparator="44" Text="[i_tarifasarticulos_buffer.referencia]" FontWeight="50" FontSize="10" BorderWidth="1" Precision="2" FontFamily="Arial Narrow" />
+  <Field WordWrap="0" Width="275" X="85" Y="0" BorderStyle="0" NegValueColor="0,0,0" Height="20" HAlignment="0" DataType="0" Field="i_tarifasarticulos_buffer.descripcion" DateFormat="11" Currency="32" BorderColor="0,0,0" BackgroundColor="255,255,255" FontItalic="0" VAlignment="1" ForegroundColor="0,0,0" CommaSeparator="44" Text="[i_tarifasarticulos_buffer.descripcion]" FontWeight="50" FontSize="10" BorderWidth="1" Precision="2" FontFamily="Arial Narrow" />
+  <Field WordWrap="0" Width="10" X="357" Y="0" BorderStyle="0" NegValueColor="0,0,0" Height="20" HAlignment="0" DataType="0" Field="i_tarifasarticulos_buffer.pvpfijo" DateFormat="11" Currency="32" BorderColor="0,0,0" BackgroundColor="255,255,255" FontItalic="0" VAlignment="1" ForegroundColor="0,0,0" CommaSeparator="44" Text="[i_tarifasarticulos_buffer.pvpfijo]" FontWeight="50" FontSize="10" BorderWidth="1" Precision="2" FontFamily="Arial Narrow" />
+  <Field WordWrap="0" Width="50" X="370" Y="0" BorderStyle="0" NegValueColor="0,0,0" Height="20" HAlignment="2" DataType="4" Field="i_tarifasarticulos_buffer.iva" DateFormat="11" Currency="32" BorderColor="0,0,0" BackgroundColor="255,255,255" FontItalic="0" VAlignment="1" ForegroundColor="0,0,0" CommaSeparator="44" Text="[i_tarifasarticulos_buffer.iva]" FontWeight="50" FontSize="10" BorderWidth="1" Precision="2" FontFamily="Arial Narrow" />
+  <Field WordWrap="0" Width="40" X="420" Y="0" BorderStyle="0" NegValueColor="0,0,0" Height="20" HAlignment="2" DataType="4" Field="i_tarifasarticulos_buffer.recargo" DateFormat="11" Currency="32" BorderColor="0,0,0" BackgroundColor="255,255,255" FontItalic="0" VAlignment="1" ForegroundColor="0,0,0" CommaSeparator="44" Text="[i_tarifasarticulos_buffer.recargo]" FontWeight="50" FontSize="10" BorderWidth="1" Precision="2" FontFamily="Arial Narrow" />
+  <Field WordWrap="0" BlankZero="1" Width="85" X="460" Y="0" BorderStyle="0" NegValueColor="0,0,0" Height="20" HAlignment="2" DataType="4" Field="i_tarifasarticulos_buffer.tarifa1" DateFormat="11" Currency="32" BorderColor="0,0,0" BackgroundColor="255,255,255" FontItalic="0" VAlignment="1" ForegroundColor="0,0,0" CommaSeparator="44" Text="[i_tarifasarticulos_buffer.tarifa1]" FontWeight="50" FontSize="10" BorderWidth="1" Precision="2" FontFamily="Arial Narrow" />
+  <Field WordWrap="0" BlankZero="1" Width="85" X="545" Y="0" BorderStyle="0" NegValueColor="0,0,0" Height="20" HAlignment="2" DataType="4" Field="i_tarifasarticulos_buffer.tarifa2" DateFormat="11" Currency="32" BorderColor="0,0,0" BackgroundColor="255,255,255" FontItalic="0" VAlignment="1" ForegroundColor="0,0,0" CommaSeparator="44" Text="[i_tarifasarticulos_buffer.tarifa2]" FontWeight="50" FontSize="10" BorderWidth="1" Precision="2" FontFamily="Arial Narrow" />
+ </Detail>
+ 
+<!-- <DetailFooter Height="60" Level="1" >
+  
+  <Line Width="1" Y1="5" Y2="5" X1="0" X2="580" Style="1" Color="100,100,100" />
+	
+  <Label WordWrap="0" Width="100" X="370" Y="8" BorderStyle="0" Height="20" HAlignment="0" BorderColor="0,0,0" BackgroundColor="255,255,255" FontItalic="0" VAlignment="1" ForegroundColor="0,0,0" Text="Total almacén" FontWeight="65" FontSize="10" BorderWidth="1" FontFamily="Arial" />
+	<CalculatedField WordWrap="0" CalculationType="1" Width="110" X="470" Y="8" BorderStyle="0" NegValueColor="0,0,0" Height="20" HAlignment="2" DataType="4" Field="stocks.cantidad*articulos.costemedio" DateFormat="11" Currency="32" BorderColor="0,0,0" BackgroundColor="255,255,255" FontItalic="0" VAlignment="1" ForegroundColor="0,0,0" CommaSeparator="44" Text="[stocks.cantidad*articulos.costemedio]" FontWeight="65" FontSize="10" BorderWidth="1" Precision="2" FontFamily="Arial" />
+ </DetailFooter>
+
+ 
+ <ReportFooter Height="25" PrintFrequency="1" >
+ 
+  <Line Width="1" Y1="1" Y2="1" X1="0" X2="580" Style="1" Color="100,100,100" />
+  <Line Width="1" Y1="3" Y2="3" X1="0" X2="580" Style="1" Color="100,100,100" />
+
+ <Label WordWrap="0" Width="300" X="170" Y="7" BorderStyle="0" Height="20" HAlignment="2" BorderColor="0,0,0" BackgroundColor="255,255,255" FontItalic="0" VAlignment="1" ForegroundColor="0,0,0" Text="Total tarifas" FontWeight="65" FontSize="12" BorderWidth="1" FontFamily="Arial" />
+ <CalculatedField WordWrap="0" CalculationType="1" Width="110" X="470" Y="7" BorderStyle="0" NegValueColor="0,0,0" Height="20" HAlignment="2" DataType="4" Field="stocks.cantidad*articulos.costemedio" DateFormat="11" Currency="32" BorderColor="0,0,0" BackgroundColor="255,255,255" FontItalic="0" VAlignment="1" ForegroundColor="0,0,0" CommaSeparator="44" Text="[stocks.cantidad*articulos.costemedio]" FontWeight="65" FontSize="12" BorderWidth="1" Precision="2" FontFamily="Arial" />
+ </ReportFooter>
+	KLO -->
+ <PageFooter Height="5" PrintFrequency="1" >
+ </PageFooter>
+</KugarTemplate>

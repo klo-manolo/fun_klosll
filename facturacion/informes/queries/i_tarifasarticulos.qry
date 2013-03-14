@@ -1,0 +1,30 @@
+<!DOCTYPE QRY>
+<QRY>
+	<name>i_tarifasarticulos</name>
+
+	<tables>i_tarifasarticulos_buffer</tables>
+
+	<group>
+		<level>0</level>
+		<field>empresa.cifnif</field>
+	</group>
+
+	<select>
+		empresa.nombre, empresa.cifnif,
+		empresa.direccion,
+		empresa.codpostal, empresa.ciudad,
+		empresa.provincia, empresa.apartado,
+		i_tarifasarticulos_buffer.referencia, i_tarifasarticulos_buffer.descripcion, i_tarifasarticulos_buffer.pvpfijo, i_tarifasarticulos_buffer.iva, i_tarifasarticulos_buffer.recargo, i_tarifasarticulos_buffer.tarifa1, i_tarifasarticulos_buffer.tarifa2
+	</select>
+
+	<from>
+		empresa, i_tarifasarticulos_buffer
+	</from>
+
+	<where>
+	</where>
+	
+	<order>
+		i_tarifasarticulos_buffer.descripcion
+	</order>
+</QRY>
